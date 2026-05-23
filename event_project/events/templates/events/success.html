@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Registration Successful</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink: #0d0d0d;
+      --paper: #f5f2eb;
+      --accent: #d4410b;
+      --border: #c8c0b0;
+    }
+
+    body {
+      background-color: var(--paper);
+      font-family: 'DM Sans', sans-serif;
+      color: var(--ink);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+      background-image:
+        repeating-linear-gradient(0deg, transparent, transparent 39px, var(--border) 39px, var(--border) 40px),
+        repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(200,192,176,0.3) 39px, rgba(200,192,176,0.3) 40px);
+    }
+
+    .card {
+      background: white;
+      border: 2px solid var(--ink);
+      border-radius: 2px;
+      width: 100%;
+      max-width: 480px;
+      box-shadow: 6px 6px 0 var(--ink);
+      text-align: center;
+      padding: 3rem 2.5rem;
+    }
+
+    .check {
+      width: 60px;
+      height: 60px;
+      background: var(--ink);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+      font-size: 1.5rem;
+    }
+
+    h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.75rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.75rem;
+    }
+
+    p {
+      color: #7a7060;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+
+    a {
+      display: inline-block;
+      padding: 0.75rem 1.75rem;
+      background: var(--accent);
+      color: white;
+      font-family: 'Syne', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: 2px solid var(--ink);
+      box-shadow: 3px 3px 0 var(--ink);
+      border-radius: 2px;
+      transition: transform 0.1s, box-shadow 0.1s;
+    }
+
+    a:hover {
+      transform: translate(-1px, -1px);
+      box-shadow: 4px 4px 0 var(--ink);
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="check">✓</div>
+    <h1>You're Registered!</h1>
+    <p>Thank you for signing up. Your registration has been saved successfully. We look forward to seeing you at the event.</p>
+    <a href="{% url 'register' %}">Register Another →</a>
+  </div>
+</body>
+</html>
